@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* common */
+.container {
+    width: 1268px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+
+/*헤더탑 로그인*/
+#header_top {
+    width: 100%;
+    height: 55px;
+    background-color: yellow;
+}
+
+#logo {
+    width: 530px;
+    height: 30px;
+    background-color: bisque;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: flex-end;
+}
+
+#header_top.login {}
+
+#header_top {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+
+
+#header_main {
+    width: 100%;
+    height: 726px;
+    background-color: #ddd;
+}
+
+
+/*헤더 슬라이더*/
+#slider {
+    width: 100%;
+    height: 726px;
+    background-color: blue;
+}
+
+/* 스와이퍼 베스트 셀러_섹션*/
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 책 요소 집어넣기  */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.boxWrap {
+    width: 1300px;
+    height: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-around;
+}
+
+.box {
+    width: 300px;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    box-shadow: 4px 4px 4px #eee;
+}
+
+.box p {
+    font-size: 11px;
+    color: #666;
+    text-align: left;
+}
