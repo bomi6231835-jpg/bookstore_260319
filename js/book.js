@@ -13,9 +13,9 @@ async function bookData() {
         const response = await fetch(url, {
             method: 'GET',
             headers: {
-                Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"
-            }
-        });
+                Authorization: "KakaoAK b471364ab9fd1371478ed9d942f26693"}
+         });        
+       
 
         if (!response.ok) {
             throw new Error(`HTTP 오류! 상태 코드: ${response.status}`);

@@ -15,12 +15,13 @@
 
 <body>
     <header>
+                <!-- 헤더 탑 -->
         <div id="header_top">
             <div class="container">
 
                 <p>Welcome to Our Publishing House!</p>
                 <div id="login">
-                    <ul>    //어떻게 중앙으로 배치할 수 있을까요??
+                    <ul>    
                         <li><a href="#">log in</a></li>
                         <li><a href="#">페이스북</a></li>
                         <li><a href="#">인스타</a></li>
@@ -34,6 +35,7 @@
 
 
 
+            <!-- 헤더메인     -->
 
 
         <div id="header_main">
@@ -66,19 +68,27 @@
 
     <div id="slider">
 
-        <h1><strong>Find Books for All Age!</strong></h1>
-
-
-        <img src="./url" alt="메인화면"> ===> 어떻게 이미지를 가져올 수 있나요?
-
-
+            <!-- 메인화면 제목 -->
+        <div class="main_window">
+        <p>Choose your Book!</p>    
+        <h1><strong>Find Books for<br>All Ages!</strong></h1>
+        
+        <!-- 이동하게 만들어주는 박스 -->
+        <p class="box_move">Discover Your Next Book</p>
+        </div>
     </div>
+        
 
 
+   
+
+            <!-- 섹션01 -->
 <section id="section1">
-        <article>
-            <div class="container">
-                <h3>Discover Your Next Book</h3>
+    <article>
+        <div class="container">
+            <div class="section_mainText">
+                <h2>Discover Your Next Book</h2>
+
                 <!-- 책 종류를 분류 네비게이션바 -->
                 <nav>
                     <ul>
@@ -88,11 +98,13 @@
                         <li><a href="#">COMING SOON</a></li>
                     </ul>
                 </nav>
-
-
-                <!-- 책 슬라이브 이미지  --> <!-- Swiper -->
-
+            </div>
                
+
+        <!-- 책 슬라이브 이미지  --> <!-- Swiper -->
+                
+               
+
                     <div class="swiper bestSeller">
                         <div class="swiper-wrapper">
 
@@ -114,11 +126,13 @@
 
                         <div class="swiper-slide">
                             It's a Really Strange Story</div>
-                    </div>
+                    
                 
-                    <div id="shopPage">DISCOVER MORE BOOKS</div>
-
-                </div>    
+                   
+                    <!-- 섹션01 아래 discover_more_books버튼  -->
+                <div class="box_move">DISCOVER MORE BOOK</div>
+            </div>          
+        </div>    
                 
         </article>
 
@@ -130,11 +144,11 @@
     <section id="section2">
         <article>
 
-            <div>
-                <h2>Stay in Touch with Our Updates</h2>
+            <div id="banner">
+                <p>Stay in Touch with Our<br>Updates</p>
             </div>
 
-
+        <div class="container">
             <h3>Choose You Book!</h3>
 
             <p>drama</p>
@@ -149,7 +163,8 @@
             <p>Recipe Books</p>
             <div class="bookImg"></div>
 
-            <h4>DISCOVER MORE CATEGORIES</h4>
+            <div class="box_move">DISCOVER MORE CATEGORIES</div>
+        </div>
 
         </article>
 
@@ -168,6 +183,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
     <script src="./js/book.js"></script>
 </body>
 
