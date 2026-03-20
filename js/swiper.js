@@ -24,4 +24,4 @@
         clickable: true,
       },
       slidesPerGroup: 3  //한번에 3개씩 넘어가는 효과
-    });
+    }); 

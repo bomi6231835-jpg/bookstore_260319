@@ -16,10 +16,11 @@
 <body>
     <header>
         <div id="header_top">
-            
+            <div class="container">
+
                 <p>Welcome to Our Publishing House!</p>
                 <div id="login">
-                    <ul>
+                    <ul>    //어떻게 중앙으로 배치할 수 있을까요??
                         <li><a href="#">log in</a></li>
                         <li><a href="#">페이스북</a></li>
                         <li><a href="#">인스타</a></li>
@@ -27,10 +28,11 @@
                         <li><a href="#">전화번호</a></li>
                     </ul>
                 </div>
+            </div>
         </div>
 
-        
-        
+
+
 
 
 
@@ -58,32 +60,26 @@
                 </nav>
             </div>
         </div>
-
-
     </header>
 
 
-        
-    <slider>
+
+    <div id="slider">
+
         <h1><strong>Find Books for All Age!</strong></h1>
-    <div class="slider">
-        <img src="https://booklovers.ancorathemes.com/wp-content/uploads/revslider/booklovers/booklovers_slide-1-copyright.jpg" alt="화면표지">
-    </slider>
 
 
+        <img src="./url" alt="메인화면"> ===> 어떻게 이미지를 가져올 수 있나요?
 
 
+    </div>
 
 
-
-    
-
-
-    <section1>
+<section id="section1">
         <article>
             <div class="container">
                 <h3>Discover Your Next Book</h3>
-                <!-- 책 발행일 분류 네비게이션바 -->
+                <!-- 책 종류를 분류 네비게이션바 -->
                 <nav>
                     <ul>
                         <li><a href="#">NEW RELEASES</a></li>
@@ -93,31 +89,45 @@
                     </ul>
                 </nav>
 
-               
-                <!-- 책 슬라이브 이미지  -->  <!-- Swiper -->
 
-                <div id="bestSeller">
+                <!-- 책 슬라이브 이미지  --> <!-- Swiper -->
+
+               
                     <div class="swiper bestSeller">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">Slide 1</div>
-                            <div class="swiper-slide">Slide 2</div>
-                            <div class="swiper-slide">Slide 3</div>
-                            <div class="swiper-slide">Slide 4</div>
-                            <div class="swiper-slide">Slide 5</div>
-                            <div class="swiper-slide">Slide 6</div>
+
+                            <div class="swiper-slide">
+                                A Doctor in the House</div>
+
+                            <div class="swiper-slide">
+                                Design of the 20th Century</div>
+                            
+                            <div class="swiper-slide">
+                                New Galaxy</div>
+
+                            <div class="swiper-slide">
+                                The Long Road to the Deep Silence</div>
+
+                            <div class="swiper-slide">
+                                Life in the Garden</div>
                         </div>
+
+                        <div class="swiper-slide">
+                            It's a Really Strange Story</div>
                     </div>
-
+                
                     <div id="shopPage">DISCOVER MORE BOOKS</div>
-                </div>
 
-
+                </div>    
                 
         </article>
 
-    </section1>
 
-    <section2>
+        
+
+    </section>
+
+    <section id="section2">
         <article>
 
             <div>
@@ -143,12 +153,19 @@
 
         </article>
 
-    </section2>
+
+
+
+
+
+    
+
+    </section>
 
     <aside></aside>
     <footer></footer>
 
-    
+
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script src="./js/book.js"></script>
