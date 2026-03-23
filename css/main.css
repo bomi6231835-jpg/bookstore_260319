@@ -183,6 +183,8 @@ nav {
     color: #fff;
 }
 
+#slider .box_move{width: 300px; height: 60px;}
+
 #slider p {
     color: #eee;
     font-size: 25px;
@@ -190,17 +192,26 @@ nav {
 }
 
 .box_move {
-    display: inline-block;
-    padding: 20px 40px;
+    display:block;
+    padding: 20px 25px;
     border: 4px;
     background-color: black;
     border-radius: 10px;
     color: #eee;
-    font-size: 25px;
+    
+    display: flex;
+   justify-content: center;
+    align-items: center;
+    
+}
+#slider .box_move {
+    width: 285px;
+    height: 65px;
+    font-size: 20px;
 }
 
 /* 섹션01 */
-#section1 .section_mainText {
+#section1 .container {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -208,10 +219,11 @@ nav {
 
 }
 
-h2 {
+.container h2 {
     font-size: 60px;
     font-weight: bold;
     margin: 120px 0 70px;
+    text-align: center;
 }
 
 #section1 nav {
@@ -227,30 +239,41 @@ h2 {
     font-size: 20px;
 }
 
-#section1 .bestSeller {
-    width: 100%;
+.bestSeller {
+    width: 150px;
+    height: 200px;
+    box-sizing: border-box;
+    object-fit: cover;    
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-
+    justify-content: center;
+    gap: 21px;
+    
 }
+
+
+#section1 .box_move {
+    width: 285px;
+    height: 65px;
+    font-size: 20px;
+    margin-top: 50px;}
 
 #banner {
     width: 100%;
     height: 370px;
     background-color: tomato;
-    margin: 117px 0 0; 
+    margin: 117px 0 0 0; 
     display: flex;
     
     justify-content: center;
     align-items: center;
 }
 #banner p {
+    margin-top: 50px;
     color: #eee;
     font-size: 50px;
     text-align: center;
-    margin-bottom: 70px;}
+    margin: 0;
+    transform: translateY(-20px);}
 
 
 /* 섹션02 */
@@ -258,18 +281,115 @@ h2 {
     width: 100%; height: 870px;
     background-color: #d3d3d3;
     margin: 0;
+    display: flex; flex-direction: column;
+    align-items: center;
+    
  }
 
 
+
+#section2 .container {
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;}
+
+
+
+
+    
+#section2 .container .box_move{
+    width: 320px;
+    height: 65px;
+   
+    margin:40px 0 112px 0;
+    font-size: 19px;
+}
+
+/*사진 정렬 섹션02*/
+#photo-wrap .container {
+  display:flex;
+  flex-direction: row;
+  
+  gap: 20px;
+  justify-content: center; /* 가운데 정렬 */
+  
+}
+
+#photo-wrap .photo {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease filter 0.4s ease;
+}
+    
+.cover {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  
+  transition: rgba(0,0,0,0) 0.4s ease;
+}
+
+.cover span {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 20px;
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* hover 효과 */
+.photo:hover img {
+  transform: scale(1.1);
+  filter: brightness(60%);
+}
+
+.photo:hover .cover {
+  background: rgba(0,0,0,0.3);
+}
+
+.photo:hover .cover span {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* 섹션03*/
+.picture a {text-decoration: none; color: #eee;}
+.picture img:hover {transform: scale(1.2);}
+
+#readDown {width: 405px; height: 528px;gap: 21px;
+    display: flex; justify-content: space-around; align-items: center; flex-direction: row;
+    background-color: yellow; margin:0 200px;  font-size: 30px; text-align: center;
+}
+
+#readDown .boxTap1{width: 405px; height: 100%; }
+.picture{width: 405px; height: 500px; overflow: hidden;}
+.picture img {min-width: 100%; height: 300px; transform: scale(1); transition: all 0.3s ease-in-out;}
+
+.boxTap1{background-color: yellow;}
 
 /* 슬라이더 동작주기 */
 
 /* 스와이퍼 베스트 셀러_섹션*/
 
 
-footer {
+/* footer {
     width: 1100px;
     height: 100px;
     background-color: #eee;
     margin: 0 auto;
-}
+} */
