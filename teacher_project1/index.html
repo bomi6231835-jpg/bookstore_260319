@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>단기 북스</title>
+
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
 
@@ -25,7 +26,7 @@
                 <ul>
                     <li><a href="#">홈</a></li>
                     <li><a href="#">선생님</a></li>
-                    <li><a href="#"></a></li>
+                    <li><a href="#">수강신청</a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
                     <li><a href="#"></a></li>
@@ -35,22 +36,38 @@
                 </ul>
             </div>
         </nav>
-
-
     </header>
 
     <main>
         <aside></aside>
         <div id="main_content">
-
             <div id="slider">
-
-                <div id="slider_txt"></div>
-                 <div class="swiper-button-next"></div>
+                <div id="slider_txt">
+                    <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
+                </div>
+                <!-- Swiper -->
+                <div class="swiper sliderSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
-                <!-- swiper -->
-                <div class="swiper mySwiper">
+            
+            <div id="search"></div>
+            <div id="best"></div>
+            <div id="banner"></div>
+            <div id="new">
+                <h3>새로 나온 교재</h3>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+                <!-- Swiper -->
+                <div class="swiper newSwiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">Slide 1</div>
                         <div class="swiper-slide">Slide 2</div>
@@ -62,18 +79,9 @@
                         <div class="swiper-slide">Slide 8</div>
                         <div class="swiper-slide">Slide 9</div>
                     </div>
-                   
-
-                    <div class="swiper-pagination"></div>
                 </div>
-
-                <div id="search"></div>
-                <div id="best"></div>
-                <div id="banner"></div>
-                <div id="new"></div>
             </div>
-
-
+        </div>
     </main>
 
     <footer>
@@ -84,19 +92,8 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-
-            },
-            pagination: {
-                el: ".swiper-pagination"},
-             });
-       
-    </script>
-
+    <script src="./js/swiper.js"></script>
+    <script src="./js/book.js"></script>
 </body>
 
 </html>

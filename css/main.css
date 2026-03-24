@@ -31,10 +31,6 @@ p {
     color: #333;
 }
 
-
-
-
-
 /*헤더탑 로그인*/
 
 #header_top {
@@ -69,36 +65,25 @@ ul {
     align-content: center;
 }
 
-
-
-
-
-
 #header_main {
     width: 100%;
     height: 104px;
     margin: 0 auto;
-
     background-color: yellow;
 }
 
 #header_main .container {
     width: 1268px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
-
-    flex-wrap: nowrap;
+   flex-wrap: nowrap;
     font-weight: bold;
     align-items: center;
-
 }
 
 #logo {
     width: 210px;
     height: 65px;
-    background-color: bisque;
-
 }
 
 nav {
@@ -131,70 +116,75 @@ nav {
 }
 
 
+/*헤더 슬라이더 (슬라이더 동작주기) */
 
-
-/*헤더 슬라이더*/
-
-
-
-#slider {
+#slider .swiper-slide{
     width: 100%;
     height: 726px;
-
-    background-image: url("https://booklovers.ancorathemes.com/wp-content/uploads/revslider/booklovers/booklovers_slide-1-copyright.jpg"
-        );
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 50px;
     text-align: center;
-
 }
 
-#slider::before {
+#slider .swiper-slide::before {
     content: "";
     position: absolute;
     width: 100%;
     height: 726px;
     background: rgba(0, 0, 0, 0.3);
+}
+/* 기본 화살표 제거 후 커스텀 이미지 넣기 */
+#slider .swiper-button-next svg,
+#slider .swiper-button-prev svg {
+  display: none; 
+}
+#slider .swiper-button-next,
+#slider .swiper-button-prev {
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  }
 
-
+#slider .swiper-button-next {
+  background: url('../img/arrow_forward.png') no-repeat center;
+  right: 4%;
+}
+#slider .swiper-button-prev {
+  background: url('../img/arrow_backward.png') no-repeat center;
+  left: 4%;  
 }
 
-
-
-
+/* 슬라이더에서 밑에 있는 pagination */
+#slider .swiper-pagination-bullet{width: 12px; height: 12px;margin-bottom: 40px;}
+#slider .swiper-pagination-bullet-active{
+    background: red;  }
 #slider .main_window {
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     position: relative;
     z-index: 2;
-    ;
-
-}
-
-
+    }
 
 #slider h1 {
     line-height: 100px;
-    color: #fff;
-}
+    color: #fff;}
 
 #slider .box_move{width: 300px; height: 60px;}
 
 #slider p {
     color: #eee;
     font-size: 25px;
-    margin: 60px;
+    margin: 20px;
     text-align: center;
 }
 
 .box_move {
     display:block;
-    padding: 20px 25px;
+    padding: 15px 20px;
     border: 4px;
     background-color: black;
     border-radius: 10px;
@@ -207,7 +197,8 @@ nav {
 #slider .box_move {
     width: 285px;
     height: 65px;
-    font-size: 20px;
+    font-size: 21px;
+    margin-top: 50px;
 }
 
 /* 섹션01 */
@@ -225,6 +216,7 @@ nav {
     margin: 120px 0 70px;
     text-align: center;
 }
+#section1 .book p {color: #333; font-size: 20px; display: flex;}
 
 #section1 nav {
     width: 900px;
@@ -249,7 +241,7 @@ nav {
     
     
     }
-.bestSeller .book{display: flex; flex-direction:column; margin-top:37px;}
+.bestSeller .book{width: 20%; display: flex; flex-direction:column; margin-top:37px;}
 .bestSeller .book p{font-size: 20px; }
 .bestSeller .book img{width: 200px; height: 285px;
 
@@ -340,16 +332,17 @@ nav {
   transition: rgba(0,0,0,0) 0.4s ease;
 }
 
-.cover h4 {
+.cover h4 {font-size: 25px; color: #fff;
+    
     margin-top: 250px;
 }
 
 .cover span {
-    display: block;
-  color: white;
-  font-size: 25px;
+  display: block;
+  color: #fff;
+  font-size: 18px;
   /* margin-bottom: 20px; */
-  transform: translateY(10 0px);
+  transform: translateY(100px);
   opacity: 0;
   transition: all 0.4s ease;
 }
@@ -369,18 +362,18 @@ nav {
   opacity: 1;
 }
 
-/* 섹션03*/
+/* 섹션03* The readDown*/
 .picture  {width: 405px; height: 530px;
     text-decoration: none; color: #eee; }
-.picture h4{margin-top: 30px;} 
+.picture h4{margin-top: 23px; font-size: 30px;} 
 .picture p {text-decoration: none; color: #eee; 
-            margin-top: 20px; margin-bottom: 80px; }
+            margin-top: 7px; margin-bottom: 50px; font-size: 25px; }
 .picture img:hover {transform: scale(1.2);}
 
 #readDown {width: 100%; height: 530px; gap:21px;
     display: flex; justify-content: space-around; 
     align-items: center; flex-direction: row;
-    margin-bottom:200px;font-size:30px; 
+    margin-bottom:200px;
     text-align: center;
 }
 
@@ -391,18 +384,46 @@ nav {
 .picture img {min-width: 100%; height: 300px; transform: scale(1); transition: all 0.3s ease-in-out;}
 
 /* 섹션3 boxTab1,2,3에 색깔 다르게 주기*/
-.boxTab1{background-color: yellow;}
+.boxTab1{background-color: blue;}
 .boxTab2{background-color:tomato}
 .boxTab3{background-color: violet;}
 
-/* 슬라이더 동작주기 */
-
-/* 스와이퍼 베스트 셀러_섹션*/
 
 
-/* footer {
-    width: 1100px;
-    height: 100px;
-    background-color: #eee;
-    margin: 0 auto;
-} */
+
+#section4 {
+    width: 100%; 
+    height: 706px; 
+    }
+
+#section4::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 705px;
+    background: rgba(0, 0, 0, 0.3);}
+
+#section4 .container{position: relative;
+z-index: 2;
+display: flex;
+gap: 10px;
+justify-content: center;
+flex-direction: column; 
+}
+#section4 .container h6{font-size: 60px; color: #eee;margin-bottom:80px; }
+#section4 h6,#section4 p{text-align: left;margin: 3px;}
+
+#section4 .box_move {width: 215px; height: 55px; 
+    padding: 15px 20px; margin: 0;}
+
+#section4 .container .box_move{margin-top: 55px;}
+
+/*풋터*/
+footer {
+    width: 100%;
+    height: 640px;
+    background-color: antiquewhite;
+    margin: 0;padding: 0;      
+}
+
+footer .container {width: 1268px; height:455px; display: flex;background-color: violet; justify-content: space-between; align-content: center;}
