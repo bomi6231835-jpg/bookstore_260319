@@ -9,8 +9,8 @@ var slider_swiper = new Swiper(".sliderSwiper", {
         clickable: true,
        
     },
-    // autoplay: {
-    //     delay: 3000,
-    //     disableOnInteraction: false,
-    // },
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
 });

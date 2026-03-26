@@ -1,0 +1,89 @@
+@charset "utf-8";
+
+/* 섹션1 */
+.section1 #shop_bar {
+    width: 100%;
+    height: 176px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1 #shop_bar p {
+    color: #fff;
+}
+
+.section1 #shop_bar h1 {
+    font-weight: bold;
+    color: #fff;
+}
+
+.section1 .container {
+    width: 1268px;
+    height: 1080px;
+    margin-top: 128px;
+    background-color: antiquewhite;
+}
+
+.section1 .container .sub_box {
+    width: 400px;
+    height: 500px;
+    float: left;
+    text-align: center;
+    margin: 0;
+    padding: 15px 30px;
+    border-radius: 4px;
+    border: 1px solid #fff;
+    box-shadow: 4px 4px 4px #fff;
+}
+
+/* 섹션2 */
+.section2 .container {
+    width: 1268px;
+    height: 1590px;
+    margin: 0 auto;
+    position: relative;
+    background-color: cornflowerblue;
+    margin-top: 125px;
+}
+
+.tab_menu {
+    display: flex;
+    justify-content:flex-start;
+    position: relative;
+    z-index: 2;
+}
+
+.tab_menu li {
+    width: 280px;
+    line-height: 60px;
+    /* background-color: aliceblue; */
+    border-right:3px solid #aaa;
+    text-align: center;
+    position: relative;
+}
+
+.tab_menu li:after {
+    content: ''; width: 0; height: 5px; position: absolute; 
+    top: 1px; left: 0; background-color:#000; 
+    
+}
+.tab_menu li:hover:after {width: 100%;}
+
+
+.active {
+    background-color:#fff;
+    /* border-bottom: 1px solid #eee; */
+}
+
+.container .tabcontent {
+    width: 100%;
+    height: 1530px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #eee;
+    border-top: 1px solid #aaa;
+}
