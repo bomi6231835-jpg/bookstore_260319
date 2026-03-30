@@ -28,9 +28,9 @@ async function bookData() {
         // 요소 선택
         const subBox = document.querySelector(".sub_box");
         const sub_title = document.querySelector(".title h2");
-        const sub_contents = document.querySelector(".contents h3");
-       
-        const sub_price = document.querySelector(".price");
+        const sub_contents = document.querySelector(".contents ");
+
+
         const book_content = document.querySelector(".book_content");
 
 
@@ -40,55 +40,77 @@ async function bookData() {
 
         // 데이터에서 필요한 값 추출
         const book = data.documents[0];
-        const { thumbnail, title, authors, contents,price, publisher, page_number, size, year_new } = book;
+        const { title, authors, price, contents, publisher, status } = book;
 
         // 요소 생성 및 추가
         subBox.innerHTML =
-            `<img src="${thumbnail}">`
+            // `<img src="${thumbnail}">`
+            `<img src="./img/chef_cooker_book.jpg">`
         sub_title.innerText += title;
         sub_contents.innerHTML += contents;
-        sub_price.innerText += price + '원';
-        
+        book_content.innerText += price + '   권 당';
 
 
-
-        content.innerHTML = `
+        book_content.innerHTML = `
         <table> 
                     <tr>
-                        <td>Author</td>
+                        <td>글</td>
                         <td class="authors">${authors}</td>
                     </tr>
 
                     <tr>
-                        <td>Publisher</td>
-                        <td class="publisher">${publisher}</td>
-                    </tr>
-                    <tr>
-                        <td>Number of pages</td>
-                        <td class="page_number"></td>
-                    </tr>
-                    
-                    <tr>
-                        <td>Year of Publishing</td>
-                        <td class="year_new"></td>
+                        <td>가격</td>
+                        <td class="price">
+                        ${price} / 권 당</td>
                     </tr>
 
                     <tr>
-               
+                        <td>발행자</td>
+                        <td class="publisher">출판사
+                        ${publisher}</td>
+                    </tr>
+                    <tr>
+                        <td>상태</td>
+                        <td class="tag">${status}</td>
+                    </tr>  
+                                                     
+                    <tr>
+                        <td>구성</td>
+                        <td>Online Book, Paper Book</td>
+                    </tr>
 
-                <td>수량</td>
-                <td>
-                    <select name="select" id="select">
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                        <option>4</option>
-                        <option>5</option>
-                    </select>
-                </td>
-                </tr>
+                    <tr>
+                        <td colspan="2" class="type_btns">
+                            <div class="item">
+                            <button class="icon_btn">
+                            <img src="img/tablet_icon.png">
+                            </button>
+                            <span class="text">	Online Book</span>
+                        </div> 
+                        
+                            <div class="item">
+                            <button class="icon_btn">
+                            <img src="img/book_icon.png">
+                            </button>
+                            <span class="text">Paper Book</span>
+                        </div>
+                        </td>
+                    </tr>
 
-            </table>`
+                    <tr class="buy_row">
+                        <td colspan="2">
+                        <select>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <button class="buy_btn">BUY NOW</button>
+                        </td>
+                    </tr>
+             </table>`
+
 
 
     } catch (error) {
@@ -101,20 +123,24 @@ bookData();
 
 
 //메모장으로 sub 텍스트 가져오기
+
 document.addEventListener("DOMContentLoaded", async function () {
     try {
-        const response = await fetch("./sub_txt/book_txt1.txt");
-        if (!response.ok) {
+        const [response1, response2] = await Promise.all([fetch("sub_txt/book_txt1.txt"),
+        fetch("sub_txt/book_txt2.txt")]);
+        if (!response1.ok | !response2.ok) {
             throw new Error("Network response was not ok");
         }
-        const data = await response.text();
-        console.log(data)
-        document.getElementsByClassName("tabcontent")[0].innerHTML = data;
-
+        const data1 = await response1.text()
+        const data2 = await response2.text();
+        console.log(data1, data2)
+        document.getElementsByClassName("tabcontent")[0].innerHTML = data1;
+        document.getElementsByClassName("tabcontent")[1].innerHTML = data2;
     } catch (error) {
         console.error("There was a problem with the fetch operation:", error);
     }
 });
+const contextBox = document.querySelectorAll(".contextbox")
 
 
-const contextBox = document.querySelector(".contextbox");
+

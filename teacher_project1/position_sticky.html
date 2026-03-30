@@ -41,3 +41,21 @@
     
 </body>
 </html>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+    try {
+        const response = await fetch("./sub_txt/book_txt1.txt");
+        const data = await response.text();
+
+        const contents = document.querySelectorAll(".tabcontent");
+
+        contents[0].innerHTML = data; // DESCRIPTION
+        contents[1].innerHTML = "여기에 PREVIEW 내용"; // PREVIEW
+
+    } catch (error) {
+        console.error(error);
+    }
+});
+</script>

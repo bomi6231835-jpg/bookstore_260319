@@ -1,7 +1,7 @@
 @charset "utf-8";
 
-/* 섹션1 */
-.section1 #shop_bar {
+/* 헤더메인 검은 바 shop */
+.section1 .shop_bar {
     width: 100%;
     height: 176px;
     background-color: #000;
@@ -9,90 +9,261 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
 }
 
-.section1 #shop_bar p {
+.section1 .shop_bar p {
     color: #fff;
 }
 
-.section1 #shop_bar h1 {
+.section1 .shop_bar h1 {
     font-weight: bold;
     color: #fff;
+    z-index: 1;
 }
 
+.section1 {background-color: #f5f5f4;}
+/* 책 이미지와 상품설명 */
 .section1 .container {
+    
     width: 1268px;
     height: 1080px;
     margin-top: 128px;
-    background-color: antiquewhite;
+    
+    display: flex;
+    align-items: flex-start;
+    /* 세로 가운데 정렬 */
+    gap: 100px;
+    /* 이미지와 글 사이 간격 */
+
+
 }
 
-.section1 .container .sub_box {
-    width: 400px;
-    height: 500px;
-    float: left;
-    text-align: center;
-    margin: 0;
-    padding: 15px 30px;
-    border-radius: 4px;
-    border: 1px solid #fff;
-    box-shadow: 4px 4px 4px #fff;
+.section1 .container .sub_box img {
+    width: 430px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
 }
+
+.container .box_story {
+    display: flex;
+    margin-top: 0;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 660px;
+}
+
+.box_story h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.box_story h3 {
+    margin: 0;
+    font-size: 23px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 줄거리 글자 */
+.contents {
+    font-size: 20px;
+}
+
+/* 테이블 컨텐츠 */
+
+.book_content {
+
+    border-bottom: 1px solid #999;
+    padding-bottom: 50px;
+}
+
+table {
+    font-size: 25px;
+    /* border-collapse: separate; */
+    border-spacing: 0 5px;
+}
+
+td:first-child {
+
+    padding: 10px;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* 버튼 아이콘 2개 */
+.type_btns {
+    border: none;
+    display: flex;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+/* 버튼 + 글 묶음 */
+.item {
+    display: flex;
+    flex-direction: column;
+    /*세로 배치*/
+    align-items: center;
+
+}
+
+/* 아이콘 */
+.icon_btn {
+    width: 85px;
+    height: 85px;
+    background-color: #eee;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+}
+
+.icon_btn img {
+    width: 40px;
+    height: 40px;
+}
+
+/* 텍스트 */
+.type_btns .text {
+    margin-top: 8px;
+    font-size: 14px;
+
+}
+
+/* buy now 수량옵션 */
+td select {
+    width: 105px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 20px;
+    font-size: 25px;
+}
+
+.buy_row td {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.buy_btn {
+    display: inline-block;
+    width: 205px;
+    height: 55px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #000;
+
+    cursor: pointer;
+    color: #eee;
+}
+
+.after_text {
+    gap: 10px;
+}
+
+
+
+
 
 /* 섹션2 */
+.section2 {background-color: #f5f5f4;}
 .section2 .container {
     width: 1268px;
     height: 1590px;
-    /* margin: 0 auto; */
+    margin: 0 auto;
     position: relative;
    
-    margin-top: 125px;
 }
 
 .tab_menu {
     display: flex;
-    justify-content:flex-start;
+    justify-content: flex-start;
     position: relative;
     z-index: 2;
-    
+
 }
 
 .tab_menu li {
     width: 280px;
-    line-height: 58px;
-    
-    border-right:3px solid #aaa;
-    border-top:3px solid #aaa;
+    line-height: 60px;
     text-align: center;
     position: relative;
-
+    background-color: #fff;
 }
 
-.tab_menu li:first-of-type{
-    border-left:3px solid #aaa;
-}
+/* 
+.tabMenu li:first-of-type {
+    border-left: 3px solid #aaa;
+} */
 
 .tab_menu li:after {
-    content: ''; width: 0; height: 3px; position: absolute; 
-    top: -4px; left: 0; background-color:#000; 
-    
-}
-.tab_menu li:hover:after {width: 100%;}
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    background-color: #000;
 
-
-.active {
-    background-color:#fff;
-   
 }
 
-.container .tabcontent {
+.tab_menu li:hover:after {
+    width: 100%;
+}
+
+.tab_menu .active {
+    background-color: #f5f5f4;
+}
+
+.tabcontent {
     width: 100%;
     height: 1530px;
-   
-    padding-left: 40px;
+    padding: 40px;
+    gap: 20px;
     left: 0;
+    bottom: 0.5px;
     top: 59px;
-    background-color: #eee;
-    border-top:1px solid #aaa;
-display: flex; flex-direction: column;
+    background-color: #f5f5f4;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
 }
+
+.tabcontent h4 {
+    font-size: 30px;
+    font-family: bold;
+}
+.tabcontent h3{font-size: 25px;}
+.tabcontent p {
+    font-size: 25px;
+    font-weight: normal;
+    
+}
+
+.tabcontent ul {
+    font-size: 25px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:5px;
+}
+
+.tabcontent button {
+    width: 150px; height: 30px; font-size: 20px;       
+}
+#blackCook {
+    display: block;
+    background-color: rgba(153, 153, 153, 0.6);
+    width: 150px;
+    height: 100px;
+    text-align: center;
+    border-radius: 15px;
+    opacity: 0.6;
+    margin-bottom: 20px;
+    }
