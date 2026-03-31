@@ -1,5 +1,6 @@
 // #slider swiper
-var slider_swiper = new Swiper(".sliderSwiper", {
+const slider_swiper = new Swiper(".sliderSwiper", {
+    loop:true,
     navigation: {
         nextEl: "#slider .swiper-button-next",
         prevEl: "#slider .swiper-button-prev",
@@ -10,7 +11,7 @@ var slider_swiper = new Swiper(".sliderSwiper", {
        
     },
     autoplay: {
-        delay: 3000,
+        delay: 4000,
         disableOnInteraction: false,
     },
 });

@@ -118,35 +118,40 @@ nav {
 }
 
 
-        /*풋터*/
+/*풋터*/
 footer {
-    width: 100%;
-    height: 640px;
-    background-color: #f5f5f4;
     
+    width: 100%;
+    height: 642px;
+    background-color: #f5f5f4;
 }
 
 footer .container {
     width: 1268px;
-    height: 460px;
+    height: 560px;
+    padding-bottom: 50px;
     display: flex;
-    margin-top: 105px;
-    border-bottom: 1px solid black;
-    }
+    padding-top: 100px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #aaa ;
+}
 
 footer .container>div {
     width: 25%;
+    
 }
 
 footer .container h4 {
     font-size: 20px;
     text-align: left;
+    font-family: "Merriweather", serif;
 }
 
 footer .container .links p {
     font-weight: normal;
     text-align: left;
     margin: 0;
+    font-family: "Merriweather", serif;
 }
 
 /* what's new 블럭     */
@@ -171,11 +176,12 @@ footer .container .what {
 .what img {
     width: 85px;
     height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* Links 블럭 */
 footer .container .links {
-
+    
     height: 322px;
     display: flex;
     flex-direction: column;
@@ -201,6 +207,33 @@ footer .getTouch {
     display: flex;
     flex-direction: column;
     gap: 55px;
+}
 
+.side {width: 65px;
+position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);  
+    display: flex;
+    flex-direction: column;
+    /*세로 배치*/
+    align-items: center;
+    
+}
+
+/* 사이드 아이콘 */
+.main_btn {
+    width: 60px;
+    height: 55px;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    
+}
+.main_btn img {
+    width: 40px;
+    height: 40px;
+    align-items: center;
 }
 

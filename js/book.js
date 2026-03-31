@@ -128,19 +128,19 @@ document.addEventListener("DOMContentLoaded", async function () {
     try {
         const [response1, response2] = await Promise.all([fetch("sub_txt/book_txt1.txt"),
         fetch("sub_txt/book_txt2.txt")]);
-        if (!response1.ok | !response2.ok) {
+        if (!response1.ok || !response2.ok) {
             throw new Error("Network response was not ok");
         }
-        const data1 = await response1.text()
-        const data2 = await response2.text();
-        console.log(data1, data2)
-        document.getElementsByClassName("tabcontent")[0].innerHTML = data1;
-        document.getElementsByClassName("tabcontent")[1].innerHTML = data2;
+        const tabBox1 = await response1.text()
+        const tabBox2 = await response2.text();
+        // console.log(tabBox1,tabBox2)
+        document.getElementById("tabBox1").innerHTML = tabBox1;
+        document.getElementById("tabBox2").innerHTML = tabBox2;
     } catch (error) {
         console.error("There was a problem with the fetch operation:", error);
     }
 });
-const contextBox = document.querySelectorAll(".contextbox")
-
+// const tabContent = document.querySelectorAll(".contextbox")
+// const btns = document.querySelectorAll('.tabcontent button');
 
 

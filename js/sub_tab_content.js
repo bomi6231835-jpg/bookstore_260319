@@ -18,5 +18,22 @@ tabMenu.forEach((tm, i) => {
   });
 });
 
+// 더보기
+const section = document.querySelector('.section2');
 
-
+const btns = document.querySelectorAll('.tabcontent button');
+console.log(btns)
+btns.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    let tmpBox = e.target.previousElementSibling
+    if (btn.textContent === '펼치기') {
+      section.style.height = '1530px';
+      tmpBox.style.height = '1530px';
+      btn.innerText = '접기';
+    } else {
+      section.style.height = '550px';
+      tmpBox.style.height = '500px';
+      btn.innerText = '펼치기';
+    }
+  });
+});
