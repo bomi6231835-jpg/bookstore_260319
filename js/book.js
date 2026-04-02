@@ -34,10 +34,6 @@ async function bookData() {
         const book_content = document.querySelector(".book_content");
 
 
-
-
-
-
         // 데이터에서 필요한 값 추출
         const book = data.documents[0];
         const { title, authors, price, contents, publisher, status } = book;
@@ -144,3 +140,61 @@ document.addEventListener("DOMContentLoaded", async function () {
 // const btns = document.querySelectorAll('.tabcontent button');
 
 
+// 풋터 책 API 가져오기
+bookData2();
+
+async function bookData2() {
+    const params = new URLSearchParams({
+        target: "title",
+        query: "소설",
+        size: 2
+    });
+    const url = `https://dapi.kakao.com/v3/search/book?${params}`;
+
+    try {
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`HTTP 오류! 상태 코드: ${response.status}`);
+        }
+
+        const data = await response.json();
+        console.log(data);
+
+        // 각각의 박스 선택
+        const box1 = document.querySelector(".whatNew1");
+        const box2 = document.querySelector(".whatNew2");
+
+        const books = data.documents;
+
+        // 첫 번째 책
+        if (books[0]) {
+            box1.innerHTML = `
+                <img src="${books[0].thumbnail}">
+                <div class="footer-text">
+                    <h6>${books[0].title}</h6>
+                    <p>${books[0].authors}</p>
+                </div>
+            `;
+        }
+
+        // 두 번째 책
+        if (books[1]) {
+            box2.innerHTML = `
+                <img src="${books[1].thumbnail}">
+                <div class="footer-text">
+                    <h6>${books[1].title}</h6>
+                    <p>${books[1].authors}</p>
+                </div>
+            `;
+        }
+
+    } catch (error) {
+        console.log('에러발생', error);
+    }
+}

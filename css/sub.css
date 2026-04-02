@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+
+
 /* 헤더메인 검은 바 shop */
 .section1 .shop_bar {
     width: 100%;
@@ -14,12 +16,18 @@
 
 .section1 .shop_bar p {
     color: #fff;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
+    padding-top: 15px;
+    font-family: "Merriweather", serif;
 }
 
 .section1 .shop_bar h1 {
     font-weight: bold;
     color: #fff;
     z-index: 1;
+    font-size: 30px;
+    font-family: "Merriweather", serif;
 }
 
 .section1 {background-color: #f5f5f4;}
@@ -50,39 +58,44 @@
     margin-top: 0;
     flex-direction: column;
     gap: 30px;
-    max-width: 660px;
+    min-width: 660px;
 }
 
 .box_story h2 {
     margin: 0;
-    font-size: 40px;
+    font-size: 45px;
     font-weight: bold;
+    font-family: "Noto Sans KR", sans-serif;
+    padding-bottom: 10px;
 }
 
 .box_story h3 {
     margin: 0;
-    font-size: 23px;
-    font-weight: bold;
-    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: normal;
+    padding-bottom: 15px;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 /* 줄거리 글자 */
 .contents {
-    font-size: 20px;
+    font-size: 22px;
+    line-height: 30px;
 }
 
 /* 테이블 컨텐츠 */
 
 .book_content {
-
-    border-bottom: 1px solid #999;
+    line-height: 25px;
+    border-bottom: 2px solid #999;
     padding-bottom: 50px;
 }
 
 table {
-    font-size: 25px;
+    font-size: 23px;
     /* border-collapse: separate; */
     border-spacing: 0 5px;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 td:first-child {
@@ -109,22 +122,25 @@ button {
     flex-direction: column;
     /*세로 배치*/
     align-items: center;
-
+    padding-top: 30px;
 }
 
 /* 아이콘 */
 .icon_btn {
     width: 85px;
     height: 85px;
-    background-color: #eee;
+    background-color: #fff;
     border: none;
     cursor: pointer;
     margin: 0;
+    z-index: 1;
+    
 }
 
 .icon_btn img {
     width: 40px;
     height: 40px;
+    z-index: 2;
 }
 
 /* 텍스트 */
@@ -152,20 +168,21 @@ td select {
 
 .buy_btn {
     display: inline-block;
-    width: 205px;
+    width: 150px;
     height: 55px;
     margin-left: 10px;
-    padding: 10px 20px;
+    padding: 1px 20px;
     background-color: #000;
-
-    cursor: pointer;
+     cursor: pointer;
     color: #eee;
+    font-size: 20px;
+     font-family: "Roboto Condensed", sans-serif;
+    
 }
 
 .after_text {
     gap: 10px;
 }
-
 
 
 
@@ -197,6 +214,8 @@ td select {
     text-align: center;
     position: relative;
     background-color: #fff;
+    font-family: "Roboto Condensed", sans-serif;
+    font-size: 20px;
 }
 
 /* 
@@ -235,6 +254,8 @@ td select {
     position: absolute;
     display: flex;
     flex-direction: column;
+    line-height: 35px;
+
 }
 
 #tabBox1,
@@ -246,12 +267,16 @@ td select {
 .tabcontent h4 {
     font-size: 30px;
     font-family: bold;
+    font-family: "Noto Sans KR", sans-serif;
 }
-.tabcontent h3{font-size: 25px; margin-bottom: 20px;}
+.tabcontent h3{
+    font-size: 25px; margin-bottom: 20px;
+    font-family: "Noto Sans KR", sans-serif;}
 
 .tabcontent p {
     font-size: 25px;
     font-weight: normal;
+    font-family: "Noto Sans KR", sans-serif;
     
 }
 
@@ -295,14 +320,15 @@ td select {
 #reviewAi h5 {
     margin-bottom: 20px;
     font-size: 40px;
-    color: #0d730d;}
+    color: #738f52;
+    font-family: "Noto Sans KR", sans-serif;}
 
 #tabBox2 #reviewAi h6{
-    color: blue;
+    color: #3547e7;
     font-size: 20px;
     font-weight: bold;    
     margin-top: 20px;
     word-spacing: 10px;
-    
+    font-family: "Noto Sans KR", sans-serif;
     
 }

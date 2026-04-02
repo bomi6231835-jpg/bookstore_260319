@@ -78,7 +78,7 @@ BookManager.prototype.init = async function () {
     this.data = await bookData();
 
     this.tabs.forEach(tab => {
-        tab.addEventListener("click", () => {
+        tab.addEventListener("click", () => {            
             const setName = tab.dataset.set;
             this.update(setName);
         });
@@ -129,3 +129,58 @@ const books = document.querySelectorAll(".book");
 const manager = new BookManager(tabs, books, bookdata);
 console.log(manager)
 manager.init();
+
+
+
+
+// bookData3();
+
+// async function bookData3() {
+//     const params = new URLSearchParams({
+//         target: "title",
+//         query: "소설",
+//         size: 1
+//     });
+//     const url = `https://dapi.kakao.com/v3/search/book?${params}`;
+
+//     try {
+//         const response = await fetch(url, {
+//             method: 'GET',
+//             headers: {
+//                 Authorization: "KakaoAK 7b2300fc6315bb65035d1a3c7b49b161"
+//             }
+//         });
+
+//         if (!response.ok) {
+//             throw new Error(`HTTP 오류! 상태 코드: ${response.status}`);
+//         }
+
+//         const data = await response.json();
+//         console.log(data);
+
+//         // .box 요소 전체 선택
+//         const boxElements = document.querySelectorAll(".book-list");
+//         console.log(boxElements)
+
+//         // documents 데이터를 각 box에 대응하여 렌더링
+//         boxElements.forEach((box, i) => {
+//             const doc = data.documents[i];
+
+//             if (!doc) return; // 데이터가 부족할 경우 생략
+
+//             // 요소 생성 및 추가
+//             box.innerHTML = `<img src="${data.documents[i].thumbnail}">
+//                     <div class="footer-text">
+//                     <h6>${data.documents[i].title}</h6>
+
+//                     <p>${data.documents[i].authors}</p>
+                    
+//                     </div>
+                    
+//                     `
+//         });
+
+//     } catch (error) {
+//         console.log('에러발생', error);
+//     }
+// }
